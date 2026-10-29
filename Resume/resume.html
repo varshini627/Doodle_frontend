@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Resume</title>
+        <style>
+            *{
+                font-family: 'Times New Roman', Times, serif !important;
+            }
+
+            body {
+                background-color: #f4f4f9;
+                margin: 0;
+                padding: 20px;
+            }
+
+            
+            .resume-wrapper {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .section-box {
+                background-color: #ffffff;
+                border: 1px solid #dcdcdc;
+                border-radius: 8px;
+                padding: 20px 25px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            }
+            .header-box {
+                display: flex;
+                align-items: center;
+                background-color: #ffffff;
+                gap: 20px;
+            }
+
+            .profile-picture-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .profile-picture-container img {
+                width: 130px; 
+                height: 140px; 
+                border-radius: 50%; 
+                border: 3px solid #dcdcdc; 
+                object-fit: cover; 
+            }
+
+            .header-info {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 35px;
+                color: #2c3e50;
+                margin: 0 0 10px 0;
+                align-self: flex-start;
+            }
+
+            h2 {
+                background-color: #5a6268;
+                color: white;
+                font-size: 22px;
+                font-weight: bold;
+                padding: 8px 12px;
+                margin: -20px -25px 20px -25px;
+                border-top-left-radius: 7px;
+                border-top-right-radius: 7px;
+            }
+
+            h3 {
+                font-size: 20px;
+                color: #555;
+                margin: 5px 0;
+                align-self: flex-start;
+            }
+
+            .role {
+                font-size: 18px;
+                line-height: 1.5;
+                color: #333;
+                margin: 0;
+            }
+
+            ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+
+            li {
+                font-size: 18px;
+                margin-bottom: 8px;
+                color: #333;
+            }
+
+        
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 10px;
+                font-size: 17px;
+            }
+
+            th, td {
+                padding: 10px;
+                border: 1px solid #ddd;
+                text-align: left;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+
+<div class="resume-wrapper">
+
+    <div class="section-box header-box" id="header-container"></div>
+
+    <div class="section-box">
+        <h2>Objective</h2>
+        <p class="role">Aspiring to start a career as a Data Analyst. Passionate about data, analytical problem-solving, and visualization.
+        Looking to apply skills in Python, SQL, and Excel to derive meaningful insights and support data-driven decisions.</p>
+    </div>
+
+    <div class="section-box">
+        <h2>Personal Details</h2>
+        <div id="personal-info-container"></div>
+    </div>
+
+    <div class="section-box">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Languages: Python, SQL</li>
+            <li>Front-End: HTML, CSS, JavaScript, Figma</li>
+            <li>Back-End: Python</li>
+            <li>Database: MySQL</li>
+        </ul>
+    </div>
+
+
+    <div class="section-box">
+        <h2>Soft Skills</h2>
+        <ul>
+            <li>Strong Communication and Presentation Abilities</li>
+            <li>Time Management and Organization</li>
+            <li>Team Collaboration and Leadership</li>
+            <li>Experience in Deadline-Driven Projects</li>
+        </ul>
+    </div>
+
+    <div class="section-box">
+        <h2>Education</h2>
+        <div id="education-container"></div>
+    </div>
+
+    
+    <div class="section-box">
+        <h2>Internship Experience</h2>
+        <p class="role"><strong>Web Developer Intern</strong> — S-Logix (OPC) Pvt. Ltd., Chennai</p>
+        <ul style="margin-top: 10px;">
+            <li>Built responsive web interfaces using HTML and CSS</li>
+            <li>Collaborated on feature implementation and testing</li>
+            <li>Delivered project modules aligned with client requirements</li>
+        </ul>
+    </div>
+
+    
+    <div class="section-box">
+        <h2>Academic Project</h2>
+        <p class="role"><strong>Student Result Management System</strong><br><em>Technologies Used: HTML, CSS, SQL</em></p>
+        <ul style="margin-top: 10px;">
+            <li>Developed a secure role-based web app to manage student data</li>
+            <li>Implemented login roles for admins and students</li>
+            <li>Enhanced accessibility and academic data handling</li>
+        </ul>
+    </div>
+
+    <div class="section-box">
+        <h2>Certifications</h2>
+        <ul>
+            <li>PGDCA– CSS Academy, Chennai– 80% (2022–2023)</li>
+            <li>HTML & CSS– Open Weaver Certified</li>
+            <li>Python for Beginners– Swayam-NPTEL</li>
+            <li>Oracle Certified Foundation Associate– Oracle University</li>
+            <li>Introduction to Professional English– 2023–2024</li>
+            <li>Photoshop Hands-on Training– DRBCCC Hindu College + SPARO Creatives</li>
+            <li>Typewriting (English, Distinction)– Govt. of TN</li>
+            <li>Web Developer Internship– S-Logix (May–Jun 2024)</li>
+        </ul>
+    </div>
+
+</div>
+
+    <script>
+       
+        const profile = {
+            fullName: "VARSHINI S",
+            email: "varshinimanjula236@gmail.com",
+            phone: "+91 6393823846",
+            linkedin: "linkedin.com/in/varshini902413292",
+            dob: "July 3, 2005",
+            gender: "Female",
+            languages: ["English", "Tamil"],
+            location: "Chennai, Tamil Nadu",
+            profileImagePath: "./profile.jpeg"
+        };
+
+        const headerHtml = `
+            <div class="profile-picture-container">
+                <img src="${profile.profileImagePath}" alt="Profile Picture">
+            </div>
+            <div class="header-info">
+                <h1>${profile.fullName}</h1>
+                <h3>email: ${profile.email}</h3>
+                <h3>linkedin: ${profile.linkedin}</h3>
+            </div>
+        `;
+        document.getElementById('header-container').innerHTML = headerHtml;
+
+
+        const personalInfoArray = [
+            { field: "Full Name", value: profile.fullName },
+            { field: "Date of Birth", value: profile.dob },
+            { field: "Gender", value: profile.gender },
+            { field: "Phone", value: profile.phone },
+            { field: "Email", value: profile.email },
+            { field: "Location", value: profile.location },
+            { field: "Languages Known", value: profile.languages.join(", ") }
+        ];
+
+        const personalInfoRows = personalInfoArray
+            .filter(info => info.value !== "")
+            .map(info => `
+                <tr>
+                    <td style="font-weight: bold; width: 30%;">${info.field}</td>
+                    <td>${info.value}</td>
+                </tr>
+            `)
+            .join('');
+
+        const personalInfoTable = `
+            <table>
+                <tbody>
+                    ${personalInfoRows}
+                </tbody>
+            </table>
+        `;
+        document.getElementById('personal-info-container').innerHTML = personalInfoTable;
+
+
+        const educationData = [
+            { level: "MCA", degree: "Master of Computer Application", institution: "S.A Engineering College", percentage: "8.05" },
+            { level: "UG", degree: "B.Sc. Computer Science", institution: "DRBCCC Hindu College, Univ. of Madras", percentage: "77.5" },
+            { level: "HSC", degree: "State Board", institution: "Immaculate Heart Girls Hr. Sec. School", percentage: "62.1%" },
+            { level: "SSLC", degree: "State Board", institution: "Jaya Matriculation Hr. Sec. School", percentage: "80.2%" }
+        ];
+
+       
+        const educationRows = educationData
+            .filter(edu => edu.level !== "") 
+            .map(edu => `
+                <tr>
+                    <td>${edu.level}</td>
+                    <td>${edu.degree}</td>
+                    <td>${edu.institution}</td>
+                    <td>${edu.percentage}</td>
+                </tr>
+            `)
+            .join('');
+
+        const educationTable = `
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${educationRows}
+                </tbody>
+            </table>
+        `;
+
+        document.getElementById('education-container').innerHTML = educationTable;
+    </script>
+</body>
+</html>
