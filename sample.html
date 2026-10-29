@@ -1,0 +1,86 @@
+<html>
+    <head>
+      <title>Information</title>
+    </head>
+    <body>
+        <div id="info"></div>
+
+        <script>
+            const userInfo = [{
+                name: 'ashwini',
+                emailId: 'ashwini12@gmail.com',
+                phonenumber: '1298765432',
+                education: [{
+                    course: 'UG',
+                    college: 'Bakthavachalam memorial college',
+                    degree: 'bsc.cs',
+                    gpa: '8.02'
+                }],
+                skills: ['React', 'Node', 'python', 'mongoose'],
+                role: 'devops Engineer'
+            },
+            {
+                 name: 'sandhiya',
+                emailId: 'sandy@gmail.com',
+                phonenumber: '1298287432',
+                education: [{
+                    course: 'UG',
+                    college: 'DRBCCC college',
+                    degree: 'bsc.cs',
+                    gpa: '9.02'
+                }],
+                skills: ['React', 'Node', 'python', 'mongoose'],
+                role: 'software Engineer'
+            },
+        {
+                 name: 'harini',
+                emailId: 'harini17@gmail.com',
+                phonenumber: '3498287432',
+                education: [{
+                    course: 'UG',
+                    college: 'S.A college',
+                    degree: 'bsc.cs',
+                    gpa: '7.02'
+                }],
+                skills: ['React', 'Node', 'python', 'mongoose'],
+                role: 'devops Engineer'
+            }];
+
+         const tableRows = userInfo
+                .filter(user => user.role === 'devops Engineer') // <-- FILTER method
+                .map(user => `                                    
+                    <tr>
+                        <td>${user.name}</td>
+                        <td>${user.emailId}</td>
+                        <td>${user.phonenumber}</td>
+                        <td>${user.role}</td>
+                        <td>${user.education[0].degree} (${user.education[0].gpa})</td>
+                        <td>${user.skills.join(', ')}</td>
+                    </tr>
+                `)
+                .join('');
+
+            // 2. Wrap the filtered rows inside a basic HTML table structure
+            const fullTable = `
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Role</th>
+                            <th>Education</th>
+                            <th>Skills</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${tableRows}
+                    </tbody>
+                </table>
+            `;
+
+            // 3. Inject the table into the div using innerHTML
+            document.getElementById('info').innerHTML = fullTable;
+        </script>
+    </body>
+</html>
